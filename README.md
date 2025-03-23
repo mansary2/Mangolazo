@@ -1,50 +1,27 @@
-# Mangolazo
+# Mangolazo - Soccer Game Scheduling App
 
-A modern web application for scheduling and managing soccer games with a credit-based system.
+A modern web application for scheduling and managing soccer games, tracking match statistics, and managing league dues.
 
 ## Features
 
-- User Profiles with Authentication
+- User Profiles with authentication
+- Team Management System
 - Game Scheduling & RSVP System
+- League Dues Management
 - Match Statistics Tracking
-- Team Management
-- Credit-based Game Economy
-  - Earn credits through participation and performance
-  - Use credits to join games and create events
-  - Transfer credits between players
-  - Special rewards for team captains
 
 ## Tech Stack
 
-- Frontend: React, Next.js, TailwindCSS
-- Backend: Node.js, Express
-- Database: SQLite
+### Frontend
+- React + Next.js
+- TailwindCSS
+- Axios for API calls
 
-## How It Works
-
-### Credit System
-- New users receive 100 credits to get started
-- Credits can be earned by:
-  - Participating in games
-  - Scoring goals and assists
-  - Being awarded by team captains
-- Credits can be spent on:
-  - Creating new games
-  - Joining existing games
-  - Transferring to other players
-
-### Game Management
-- Create and schedule games
-- RSVP to games with credits
-- Track match statistics
-- Manage team rosters
-- View player performance history
-
-### Team Features
-- Team captain privileges
-- Player statistics tracking
-- Performance-based rewards
-- Team management tools
+### Backend
+- Node.js + Express
+- JWT Authentication
+- SQLite Database
+- Dues Management System
 
 ## Getting Started
 
@@ -55,9 +32,63 @@ A modern web application for scheduling and managing soccer games with a credit-
 ### Installation
 
 1. Clone the repository
-2. Install dependencies for both frontend and backend
-3. Set up environment variables
-4. Start development servers
+2. Install dependencies:
+   ```bash
+   # Install frontend dependencies
+   cd frontend
+   npm install
+
+   # Install backend dependencies
+   cd ../backend
+   npm install
+   ```
+
+3. Set up environment variables:
+   - Create `.env` files in both frontend and backend directories
+   - Copy the example environment variables and fill in your values
+
+4. Start the development servers:
+   ```bash
+   # Start backend server
+   cd backend
+   npm run dev
+
+   # Start frontend server
+   cd frontend
+   npm run dev
+   ```
+
+## Environment Variables
+
+### Backend
+```
+PORT=3001
+JWT_SECRET=your_jwt_secret
+DATABASE_URL=sqlite://./database.sqlite
+CLOUDINARY_CLOUD_NAME=your_cloudinary_name
+CLOUDINARY_API_KEY=your_cloudinary_key
+CLOUDINARY_API_SECRET=your_cloudinary_secret
+SENDGRID_API_KEY=your_sendgrid_key
+
+# Dues Management Configuration
+TEAM_REGISTRATION_FEE=500
+REFEREE_FEE_PER_GAME=100
+REGULAR_SEASON_GAMES=10
+```
+
+### Frontend
+```
+NEXT_PUBLIC_API_URL=http://localhost:3001
+```
+
+## Dues Management
+
+The app helps team captains manage league dues by:
+1. Tracking team registration fees
+2. Managing referee fees per game
+3. Splitting costs among team members
+4. Monitoring payment status
+5. Sending payment reminders
 
 ## License
 
