@@ -54,15 +54,6 @@ A modern web application for scheduling and managing soccer games, tracking matc
    npm run dev
    ```
 
-## Dues Management
-
-The app helps team captains manage league dues by:
-1. Tracking team registration fees
-2. Managing referee fees per game
-3. Splitting costs among team members
-4. Monitoring payment status
-5. Sending payment reminders
-
 ## License
 
 MIT 
