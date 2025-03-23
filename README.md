@@ -20,7 +20,7 @@ A modern web application for scheduling and managing soccer games, tracking matc
 ### Backend
 - Node.js + Express
 - JWT Authentication
-- SQLite Database
+- JSON File Storage
 - Dues Management System
 
 ## Getting Started
@@ -43,11 +43,7 @@ A modern web application for scheduling and managing soccer games, tracking matc
    npm install
    ```
 
-3. Set up environment variables:
-   - Create `.env` files in both frontend and backend directories
-   - Copy the example environment variables and fill in your values
-
-4. Start the development servers:
+3. Start the development servers:
    ```bash
    # Start backend server
    cd backend
@@ -57,29 +53,6 @@ A modern web application for scheduling and managing soccer games, tracking matc
    cd frontend
    npm run dev
    ```
-
-## Environment Variables
-
-### Backend
-```
-PORT=3001
-JWT_SECRET=your_jwt_secret
-DATABASE_URL=sqlite://./database.sqlite
-CLOUDINARY_CLOUD_NAME=your_cloudinary_name
-CLOUDINARY_API_KEY=your_cloudinary_key
-CLOUDINARY_API_SECRET=your_cloudinary_secret
-SENDGRID_API_KEY=your_sendgrid_key
-
-# Dues Management Configuration
-TEAM_REGISTRATION_FEE=500
-REFEREE_FEE_PER_GAME=100
-REGULAR_SEASON_GAMES=10
-```
-
-### Frontend
-```
-NEXT_PUBLIC_API_URL=http://localhost:3001
-```
 
 ## Dues Management
 
